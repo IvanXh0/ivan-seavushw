@@ -1,0 +1,105 @@
+/* - Make the header a flexbox container 
+- Set the flex direction in the header so that the header-brand is on the right side */
+
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+/* - Make the navigation horizontal with flexbox */
+
+.header-nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+/* - Use flexbox to position the <aside> on the right side, and the .hero-page section on the left */
+
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+aside {
+    padding-right: 10px;
+}
+
+aside nav ul {
+    list-style: none;
+    font-size: 25px;
+}
+
+/* - Add flexbox on the .hero-page section so the articles position next to each other */
+
+/* - Bonus: Add a background-image on the .hero-page section (hint: Use something from pexels or unsplash) */
+
+.hero-page-h1 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.hero-page {
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    color: darkgoldenrod;
+}
+
+.primary-card {
+    padding: 20px;
+}
+
+.secondary-card {
+    padding: 20px;
+}
+
+
+footer {
+    display: none;
+}
+
+
+/* - The header nav should not be seen on a mobile device */
+/* - On mobile device the articles in the hero section should flow vertically */
+/* - The footer should only be visible on mobile devices */
+
+@media only screen and (max-width: 600px) {
+
+    .header-nav {
+        display: none;
+    }
+
+    .hero-page {
+        flex-direction: column;
+    }
+
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 25px;
+    }
+
+    footer ul li {
+        list-style: none;
+    }
+
+}
+
+
+
+
+/* (Do a bit of research to see how exactly this works, it can be tricky :D) */
+/* - Bonus 2: Add other styles to the homework */
+
+.header-nav ul li {
+    list-style: none;
+    font-size: 25px;
+}
