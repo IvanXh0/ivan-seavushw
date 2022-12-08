@@ -4,5 +4,5 @@ const taxRate = 1.05;
 
 let totalPrice = (priceOfOnePhone * taxRate) * phones;
 
-console.log(`The total cost is $${totalPrice}.`)
+console.log(`The total cost is $${totalPrice}.`);
 alert(`The total cost is $${totalPrice}.`);
