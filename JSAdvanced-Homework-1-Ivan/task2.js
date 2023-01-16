@@ -2,8 +2,12 @@
 
 // Print all digits of a given number
 
-const num = Number(prompt("Enter a number to split into single digits:"));
+let num = Number(prompt("Enter a number to split into single digits:"));
 let output = [];
+while (isNaN(num)) {
+  num = Number(prompt("Enter a number to split into single digits:"));
+}
+
 let digits = num.toString();
 
 for (let i = 0; i < digits.length; i += 1) {

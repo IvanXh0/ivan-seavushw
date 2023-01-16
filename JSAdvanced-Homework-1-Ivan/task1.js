@@ -6,6 +6,10 @@ function sumFromOneToN(n) {
   let result = 0;
   n = Number(prompt("Enter a number to sum up to"));
 
+  while (isNaN(n)) {
+    n = Number(prompt("Enter a number to sum up to"));
+  }
+
   for (let x = 1; x <= n; x++) {
     result += x;
   }

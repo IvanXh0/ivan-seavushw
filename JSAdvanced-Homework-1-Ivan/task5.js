@@ -2,13 +2,27 @@
 
 // Delete all elements of the array except the numbers
 
-let arr = [5, 12, "someword", undefined, 15, 23, true, "string"];
+let mixedArr = [
+  5,
+  12,
+  "someword",
+  undefined,
+  15,
+  23,
+  true,
+  "string",
+  55,
+  78,
+  "test",
+  false,
+];
+let numberArr = [];
 
-for (let i = 0; i < arr.length; i++) {
-  if (typeof arr[i] !== "number") {
-    arr.splice(i, i);
+for (let i = 0; i < mixedArr.length; i++) {
+  if (typeof mixedArr[i] === "number") {
+    numberArr.push(mixedArr[i]);
   }
 }
 
 console.log("Only the numbers from the given array are: ");
-console.log(arr);
+console.log(numberArr);
